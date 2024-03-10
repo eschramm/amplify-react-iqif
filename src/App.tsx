@@ -1,33 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import iQIFLogo from './assets/icon-splash-512.png'
+import AppStoreLogo from './assets/AppStore.svg'
+import entryScreenshot from './assets/entry_screenshot.png'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <img src={iQIFLogo} className="logo" alt="iQIF logo" />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+      <h1>iQIF</h1>
+      <p className="description">
+        A simple app to enter transactions on-the-go in the fewest taps for QIF import into <a href="https://www.gnucash.org" target='_blank'>GNUCash</a> or other money applications.
       </p>
+      <div>
+        <img className="screenshot" src={entryScreenshot} alt="screenshot of data entry in iQIF" />
+      </div>
+      <a href="https://apps.apple.com/us/app/iqif/id386493543">
+        <img src={AppStoreLogo} alt="App Store logo" />
+      </a>
     </>
   )
 }
